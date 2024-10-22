@@ -6,6 +6,8 @@ from langgraph.checkpoint.memory import MemorySaver
 from langgraph.graph import END, START, MessagesState, StateGraph
 from langgraph.prebuilt import ToolNode
 
+from studio.configuration import AgentConfigurable
+
 from langchain_arcade import ArcadeToolkit
 
 # Initialize the Arcade Toolkit with tools
@@ -46,7 +48,7 @@ def authorize(state: MessagesState, config: dict):
         return {"messages": state["messages"][-1]}
 
 # Build the graph
-workflow = StateGraph(MessagesState)
+workflow = StateGraph(MessagesState, AgentConfigurable)
 
 # Add nodes to the graph
 workflow.add_node("agent", call_agent)
