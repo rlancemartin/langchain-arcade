@@ -1,0 +1,15 @@
+version: "0.2"
+ignorePaths:
+  - pyproject.toml
+dictionaryDefinitions: []
+dictionaries: []
+words:
+  - conlist
+  - fastapi
+  - httpx
+  - openai
+  - pydantic
+  - pyproject
+  - toolpack
+ignoreWords: []
+import: []
